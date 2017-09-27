@@ -16,6 +16,7 @@ $obj->countCharFunction($strCountChar);
 $obj->strLengthFunction($strCountChar);
 $obj->stringLTrimFunction($strCountChar);
 $obj->stringReverseFunction($strCountChar);
+$obj->substringFunction($strCountChar);
 
 
 class main
@@ -88,7 +89,7 @@ class main
 
 	public function stringLTrimFunction($str)
 	{
-		echo '<h3> String Trim Function: </h3>';
+		echo '<h3> String Inital Trim Function: </h3>';
 		echo '<h4> Before Trim: </h4>';
 		print_r($str);
 		echo ('<h4> After Trim: </h4>');
@@ -103,6 +104,16 @@ class main
 		print_r($str);
 		echo ('<h4> After Reverse: </h4>');
 		echo strrev($str);
+		echo '<hr>';
+	}
+
+	public function substringFunction($str)
+	{
+		echo '<h3> Sub-String Function: </h3>';
+		echo '<h4> Before Sub-String: </h4>';
+		print_r($str);
+		echo ('<h4> After Sub-String: </h4>');
+		echo substr($str, 10);
 		echo '<hr>';
 	}
 }
