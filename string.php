@@ -4,11 +4,13 @@ $obj=new main();
 
 $strExplode = "This*is*explode*function";
 $strChunk = "This is chunk split function";
+$strChop = "This is chop function";
 
 $obj->echoFunction();
 $obj->chrFunction();
 $obj->explodeFunction($strExplode);
 $obj->chunkSplitFunction($strChunk);
+$obj->chopFunction($strChop);
 
 
 class main
@@ -51,6 +53,16 @@ class main
 		print_r($strChunk);
 		echo ('<h4> After Chunk Split: </h4>');
 		echo chunk_split($strChunk,2,"*");
+		echo '<hr>';
+	}
+
+	public function chopFunction($strChop)
+	{
+		echo '<h3> Chop Function: </h3>';
+		echo '<h4> Before Chop: </h4>';
+		print_r($strChop);
+		echo ('<h4> After Chop: </h4>');
+		echo chop($strChop,"function");
 		echo '<hr>';
 	}
 
