@@ -2,11 +2,14 @@
 
 $obj=new main();
 
-$strExplode="This*is*explode*function";
+$strExplode = "This*is*explode*function";
+$strChunk = "This is chunk split function";
 
 $obj->echoFunction();
 $obj->chrFunction();
-$obj->explodeFunction(strExplode);
+$obj->explodeFunction($strExplode);
+$obj->chunkSplitFunction($strChunk);
+
 
 class main
 {
@@ -19,7 +22,7 @@ class main
 
 	public function echoFunction()
 	{
-		echo '<h2> This is echo function </h2>';
+		echo '<h2> echo function </h2>';
 		echo '<hr>';
 	}
 
@@ -31,14 +34,25 @@ class main
 		echo '<hr>';
 	}	
 
-	public function explodeFunction(strExplode)
+	public function explodeFunction($strExplode)
 	{
-		echo '<h3> This is Explode Function: </h3>';
-		echo explode("*", strExplode);
+		echo '<h3> Explode Function: </h3>';
+		echo '<h4> Before Explode: </h4>';
+		print_r($strExplode);
+		echo ('<br><br> <h4> After Explode: </h4>');
+		print_r  (explode("*", $strExplode));
 		echo '<hr>';
 	}
 
-
+	public function chunkSplitFunction($strChunk)
+	{
+		echo '<h3> Chunk Split Function: </h3>';
+		echo '<h4> Before Chuck Split: </h4>';
+		print_r($strChunk);
+		echo ('<h4> After Chunk Split: </h4>');
+		echo chunk_split($strChunk,2,"*");
+		echo '<hr>';
+	}
 
 }
 
