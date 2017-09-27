@@ -13,6 +13,7 @@ $obj->explodeFunction($strExplode);
 $obj->chunkSplitFunction($strChunk);
 $obj->chopFunction($strChop);	
 $obj->countCharFunction($strCountChar);
+$obj->strLengthFunction($strCountChar);
 
 
 class main
@@ -73,6 +74,14 @@ class main
 		echo '<h3> Count Char Function: </h3>';
 		echo count_chars($strCountChar,3);
 		// echo count_chars($strCountChar,4);
+		echo '<hr>';
+	}
+
+	public function strLengthFunction($str)
+	{
+		echo '<h3> String Length Function: </h3>';
+		echo strlen($str);
+		echo '<hr>';
 	}
 
 }
