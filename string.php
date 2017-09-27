@@ -14,6 +14,7 @@ $obj->chunkSplitFunction($strChunk);
 $obj->chopFunction($strChop);	
 $obj->countCharFunction($strCountChar);
 $obj->strLengthFunction($strCountChar);
+$obj->stringLTrimFunction($strCountChar);
 
 
 class main
@@ -84,6 +85,15 @@ class main
 		echo '<hr>';
 	}
 
+	public function stringLTrimFunction($str)
+	{
+		echo '<h3> String Trim Function: </h3>';
+		echo '<h4> Before Trim: </h4>';
+		print_r($str);
+		echo ('<h4> After Trim: </h4>');
+		echo ltrim($str,"Using Co");
+		echo '<hr>';
+	}
 }
 
 ?>
