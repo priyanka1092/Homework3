@@ -2,10 +2,11 @@
 
 $obj=new main();
 
+$strExplode="This*is*explode*function";
+
 $obj->echoFunction();
 $obj->chrFunction();
-
-$strFindChar="";
+$obj->explodeFunction(strExplode);
 
 class main
 {
@@ -29,6 +30,14 @@ class main
 		echo chr(054) ;
 		echo '<hr>';
 	}	
+
+	public function explodeFunction(strExplode)
+	{
+		echo '<h3> This is Explode Function: </h3>';
+		echo explode("*", strExplode);
+		echo '<hr>';
+	}
+
 
 
 }
