@@ -5,12 +5,14 @@ $obj=new main();
 $strExplode = "This*is*explode*function";
 $strChunk = "This is chunk split function";
 $strChop = "This is chop function";
+$strCountChar = "Using Count Char Function";
 
 $obj->echoFunction();
 $obj->chrFunction();
 $obj->explodeFunction($strExplode);
 $obj->chunkSplitFunction($strChunk);
-$obj->chopFunction($strChop);
+$obj->chopFunction($strChop);	
+$obj->countCharFunction($strCountChar);
 
 
 class main
@@ -64,6 +66,13 @@ class main
 		echo ('<h4> After Chop: </h4>');
 		echo chop($strChop,"function");
 		echo '<hr>';
+	}
+
+	public function countCharFunction($strCountChar)
+	{
+		echo '<h3> Count Char Function: </h3>';
+		echo count_chars($strCountChar,3);
+		// echo count_chars($strCountChar,4);
 	}
 
 }
