@@ -15,6 +15,7 @@ $obj->chopFunction($strChop);
 $obj->countCharFunction($strCountChar);
 $obj->strLengthFunction($strCountChar);
 $obj->stringLTrimFunction($strCountChar);
+$obj->stringReverseFunction($strCountChar);
 
 
 class main
@@ -92,6 +93,16 @@ class main
 		print_r($str);
 		echo ('<h4> After Trim: </h4>');
 		echo ltrim($str,"Using Co");
+		echo '<hr>';
+	}
+
+	public function stringReverseFunction($str)
+	{
+		echo '<h3> String Reverse Function: </h3>';
+		echo '<h4> Before Reverse: </h4>';
+		print_r($str);
+		echo ('<h4> After Reverse: </h4>');
+		echo strrev($str);
 		echo '<hr>';
 	}
 }
